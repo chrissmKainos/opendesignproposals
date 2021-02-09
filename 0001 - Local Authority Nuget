@@ -6,13 +6,13 @@ Detailed below is the suggested approach to be taken to replace the current Loca
 ## Detail
 This full breakout of the service, nuget creation/publish and finally nuget consumption will be done as two individual sub tasks. In doing this we will reduce any impact on the current develop branch of the He.Htb.Apply pipeline.
 
-#### Sub task 1: New service solution & Nuget
-A new solution and project will be created containing an exact copy of the code in use by the existing He.Htb.Apply.Application project. The structure of this will be:
-* __Repo__: he.htb.apply
-* __Solution name__: He.Htb.Apply.Services
+#### Sub task 1: New service project & Nuget
+A new project will be created within the existing He.Htb.Apply solution, this will contain an exact copy of the code in use by the existing He.Htb.Apply.Application project. The new project structure will be:
+* __Repo name__: he-htb-apply
+* __Solution name__: He.Htb.Apply
 * __Project name__: He.Htb.Apply.Services.LocalAuthority
 
-The above code will be merged into the  develop branch of the he.htb.apply repo with a new nuget package published to:
+The above code will be merged into the  develop branch of the he-htb-apply repo with a new nuget package published to:
 * __Package feed__: homesengland/Help to Buy Apply Beta/Artifacts/Packages
 * __Nuget name__: He.Htb.Apply.Services.LocalAuthority
 
@@ -22,7 +22,7 @@ __Note:__ Sub task 2 will only beging once the above update has succesfully pass
 Given we now have a published nuget package for the local authority service, we can remove the original service and replace it with the nuget.
 
 * Remove LocalAuthorityService classes from project He.Htb.Apply.Application
-* Replace any references to the removed LocalAuthorityService with the new nuget package (within the He.Htb.Apply solution)
+* Replace any references to the removed LocalAuthorityService with the new nuget package.
 
 ## Questions to consider
 
