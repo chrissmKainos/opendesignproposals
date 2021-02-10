@@ -13,7 +13,7 @@ A new project will be created within the existing He.Htb.Apply solution, this wi
 * __Project name__: He.Htb.Apply.Services.LocalAuthority
 
 The above code will be merged into the  develop branch of the he-htb-apply repo with a new nuget package published to:
-* __Package feed__: homesengland/Help to Buy Apply Beta/Artifacts/Packages
+* __Package feed__: homesengland
 * __Nuget name__: He.Htb.Apply.Services.LocalAuthority
 
 __Note:__ Sub task 2 will only beging once the above update has succesfully passed through the CI pipelines and a nuget package is available on the proposed feed.
